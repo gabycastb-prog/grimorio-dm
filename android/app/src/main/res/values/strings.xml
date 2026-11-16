@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Grimorio del DM</string>
+    <string name="title_activity_main">Grimorio del DM</string>
+    <string name="package_name">com.hanna.grimoriodm</string>
+    <string name="custom_url_scheme">com.hanna.grimoriodm</string>
+</resources>
