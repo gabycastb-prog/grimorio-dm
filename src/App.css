@@ -70,3 +70,187 @@
     padding: 14px;
   }
 }
+.buscador {
+  width: 100%;
+  margin: 16px 0 8px;
+  padding: 12px 14px;
+  background-color: var(--fondo);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.buscador:focus {
+  outline: none;
+  border-color: var(--dorado);
+}
+
+.contador {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.mensaje {
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.mensaje.error {
+  color: #ff8a80;
+}
+
+.lista-monstruos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.boton-monstruo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: var(--fondo);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.boton-monstruo:hover {
+  border-color: var(--dorado);
+}
+
+.boton-monstruo:disabled {
+  opacity: 0.5;
+}
+
+.boton-monstruo .mas {
+  color: var(--dorado);
+  font-size: 1.2rem;
+}
+
+.encabezado-partida {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--borde);
+}
+
+.encabezado-partida h3 {
+  color: var(--dorado);
+  font-size: 1.1rem;
+}
+
+.boton-limpiar {
+  padding: 6px 12px;
+  background-color: transparent;
+  color: var(--texto-suave);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.tarjeta {
+  background-color: var(--fondo);
+  border: 1px solid var(--dorado);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  background-color: #000;
+}
+
+.tarjeta-cuerpo {
+  padding: 16px;
+}
+
+.tarjeta-cuerpo h3 {
+  color: var(--dorado);
+  font-size: 1.2rem;
+}
+
+.tarjeta-subtitulo {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.tarjeta-datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.estadistica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 4px;
+  background-color: var(--panel);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.estadistica-valor {
+  color: var(--texto);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.estadistica-etiqueta {
+  color: var(--texto-suave);
+  font-size: 0.7rem;
+  margin-top: 4px;
+}
+
+.boton-quitar {
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px;
+  background-color: var(--rojo);
+  color: var(--texto);
+  border: none;
+  border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+  .lista-monstruos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cuadricula {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .lista-monstruos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cuadricula {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
