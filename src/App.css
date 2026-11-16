@@ -1,0 +1,72 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  overflow-x: hidden;
+}
+
+.encabezado {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.encabezado h1 {
+  color: var(--dorado);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+
+.encabezado p {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.navegacion {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.navegacion button {
+  flex: 1;
+  padding: 12px 6px;
+  background-color: var(--panel);
+  color: var(--texto-suave);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.navegacion button.activo {
+  background-color: var(--rojo);
+  color: var(--texto);
+  border-color: var(--dorado);
+}
+
+.seccion {
+  background-color: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.seccion h2 {
+  color: var(--dorado);
+  margin-bottom: 8px;
+}
+
+.seccion p {
+  color: var(--texto-suave);
+}
+
+@media (min-width: 768px) {
+  .encabezado h1 {
+    font-size: 2.6rem;
+  }
+
+  .navegacion button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}

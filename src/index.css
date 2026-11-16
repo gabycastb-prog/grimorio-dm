@@ -1,0 +1,27 @@
+:root {
+  --fondo: #14100c;
+  --panel: #241b14;
+  --borde: #4a3726;
+  --dorado: #d4a64a;
+  --rojo: #9b2226;
+  --texto: #f1e6d0;
+  --texto-suave: #b9a88c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Georgia, 'Times New Roman', serif;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
