@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { obtenerMonstruos, obtenerMonstruo, urlImagen } from '../services/dndApi'
 import Tarjeta from '../components/Tarjeta'
 import Estadistica from '../components/Estadistica'
+import { formatearDesafio } from '../utils/formato'
 
 function Bestiario() {
   const [monstruos, setMonstruos] = useState([])
@@ -99,7 +100,7 @@ function Bestiario() {
           >
             <Estadistica etiqueta="Clase de Armadura" valor={enemigo.armor_class[0].value} />
             <Estadistica etiqueta="Puntos de Golpe" valor={enemigo.hit_points} />
-            <Estadistica etiqueta="Nivel de Desafío" valor={enemigo.challenge_rating} />
+            <Estadistica etiqueta="Nivel de Desafío" valor={formatearDesafio(enemigo.challenge_rating)} />
           </Tarjeta>
         ))}
       </div>

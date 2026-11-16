@@ -22,6 +22,10 @@ function App() {
         {seccion === 'loot' && <Loot />}
         {seccion === 'dados' && <Dados />}
       </main>
+      <footer className="pie">
+        <p>Datos obtenidos de la D&amp;D 5e API</p>
+        <p>Hecho por Hanna Castaño</p>
+      </footer>
     </div>
   )
 }
