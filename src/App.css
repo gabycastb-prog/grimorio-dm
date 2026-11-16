@@ -372,3 +372,170 @@
 .botin .estadistica-valor {
   font-size: 0.95rem;
 }
+
+.dados-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.boton-dado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 4px;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  color: var(--texto-suave);
+}
+
+.boton-dado-forma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--borde);
+  color: var(--texto);
+  font-weight: bold;
+  font-size: 0.85rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.boton-dado-nombre {
+  font-size: 0.85rem;
+}
+
+.boton-dado.activo {
+  border-color: var(--dorado);
+  color: var(--dorado);
+}
+
+.boton-dado.activo .boton-dado-forma {
+  background-color: var(--rojo);
+}
+
+.control-cantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.control-cantidad button {
+  width: 44px;
+  height: 44px;
+  background-color: var(--fondo);
+  color: var(--dorado);
+  border: 1px solid var(--dorado);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.control-cantidad button:disabled {
+  opacity: 0.3;
+}
+
+.control-cantidad span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+.bandeja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  margin-top: 20px;
+  padding: 24px;
+  background-color: var(--fondo);
+  border: 2px solid var(--dorado);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.resultado-numero {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--texto);
+  line-height: 1;
+  animation: rodar 0.5s ease-out;
+}
+
+.resultado-numero.critico {
+  color: var(--dorado);
+}
+
+.resultado-numero.pifia {
+  color: #ff6b6b;
+}
+
+@keyframes rodar {
+  0% {
+    transform: rotate(-180deg) scale(0.3);
+    opacity: 0;
+  }
+  70% {
+    transform: rotate(15deg) scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.aviso-critico {
+  color: var(--dorado);
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+.aviso-pifia {
+  color: #ff6b6b;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+.detalle-tiradas {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.historial {
+  list-style: none;
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.historial li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+.historial strong {
+  color: var(--dorado);
+}
+
+@media (min-width: 600px) {
+  .dados-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
