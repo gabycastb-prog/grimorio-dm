@@ -23,3 +23,20 @@ export function urlImagen(ruta) {
   }
   return `${URL_BASE}${ruta}`
 }
+
+export async function obtenerLista(endpoint) {
+  const respuesta = await fetch(`${URL_BASE}/api/${endpoint}`)
+  if (!respuesta.ok) {
+    throw new Error('No se pudo cargar la lista de objetos')
+  }
+  const datos = await respuesta.json()
+  return datos.results
+}
+
+export async function obtenerDetalle(url) {
+  const respuesta = await fetch(`${URL_BASE}${url}`)
+  if (!respuesta.ok) {
+    throw new Error('No se pudo cargar el objeto')
+  }
+  return respuesta.json()
+}

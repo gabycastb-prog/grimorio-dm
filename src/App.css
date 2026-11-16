@@ -254,3 +254,121 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.control-desafio {
+  margin: 20px 0;
+  padding: 16px;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.control-desafio label {
+  display: block;
+  color: var(--texto);
+  margin-bottom: 10px;
+}
+
+.control-desafio strong {
+  color: var(--dorado);
+  font-size: 1.3rem;
+}
+
+.control-desafio input {
+  width: 100%;
+  accent-color: var(--dorado);
+}
+
+.nivel-etiqueta {
+  margin-top: 8px;
+  color: var(--dorado);
+  font-style: italic;
+}
+
+.boton-principal {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--dorado);
+  color: var(--fondo);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.boton-principal:disabled {
+  opacity: 0.6;
+}
+
+.subtitulo-botin {
+  color: var(--dorado);
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--borde);
+}
+
+.monedas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.moneda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 4px;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.moneda-circulo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.moneda-circulo.cobre {
+  background-color: #b87333;
+}
+
+.moneda-circulo.plata {
+  background-color: #c0c0c0;
+}
+
+.moneda-circulo.oro {
+  background-color: #ffd700;
+}
+
+.moneda-circulo.platino {
+  background-color: #e5e4e2;
+}
+
+.moneda-cantidad {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.moneda-nombre {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.total-oro {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.total-oro strong {
+  color: var(--dorado);
+}
+
+.botin .estadistica-valor {
+  font-size: 0.95rem;
+}
